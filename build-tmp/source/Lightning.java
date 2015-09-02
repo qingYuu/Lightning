@@ -19,17 +19,20 @@ int startY = 0;
 int endX = 150;
 int endY = 0;
 
-
+PImage photo;
 public void setup()
 {
   size(300,300);
-  strokeWeight(.27f);
+  strokeWeight(.90f);
   //background(1,38,87);
+  photo = loadImage("Apjavalightning.jpg"); 
+  image(photo,0,0,300,300);
 }
 public void draw()
-{
-  stroke(0, 0, (int)(Math.random()*255));
-  while (endY < 300) 
+{ 
+ 
+  stroke(0, 0, (int)(Math.random()*255)-94);
+  while (endY < 500) 
   {
   	endX = startX + (int)(Math.random()*18)-9;
     endY = startY + (int)(Math.random()*9);
@@ -37,10 +40,12 @@ public void draw()
     startX = endX;
     startY = endY;
   }
+    
 }
 public void mousePressed()
 {
  //background(1,38,87);
+ image(photo,0,0,300,300);
  startX = 150; 
  startY = 0;
  endX = 150;
