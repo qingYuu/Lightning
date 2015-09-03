@@ -8,9 +8,10 @@ void setup()
 {
   size(300,300);
   strokeWeight(.90);
-  //background(1,38,87);
-  photo = loadImage("Apjavalightning.jpg"); 
+  background(1,38,87);
+  photo = loadImage("Apjavalightning2.png"); 
   image(photo,0,0,300,300);
+  
 }
 void draw()
 { 
@@ -24,16 +25,17 @@ void draw()
     startX = endX;
     startY = endY;
   }
-    
+   
+  
 }
 void mousePressed()
 {
- //background(1,38,87);
+ background(1,38,87);
  image(photo,0,0,300,300);
+ 
  startX = 150; 
  startY = 0;
  endX = 150;
  endY = 0;
- 
 }
 
